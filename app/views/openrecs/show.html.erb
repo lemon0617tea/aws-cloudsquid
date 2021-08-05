@@ -1,0 +1,156 @@
+<body>
+
+
+<div class="all_ph">
+  <div class="openrec_show01">
+  <iframe width="100%" height="240" src="https://www.openrec.tv/live/<%= @openrec.openrec_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="notification_ph">
+  <p id="notice"><%= notice %></p>
+  </div>
+  <div class="openrec_show">  
+    <!---->
+    <div class="openrec_show01">
+    <%= @openrec.body %>
+    </div>
+    <!---->
+    <div class="openrec_show02">
+      <!--Destroy---Edit---Back-->
+      <% if @openrec.user.id == current_user.id %>
+        <!---->
+        <div class="openrec_show03 container">
+        <%= link_to '削除', @openrec, method: :delete, data: { confirm: 'Are you sure?' }, class: "openrec_text_show" %>
+        </div>
+        <!---->
+        <div class="openrec_show04 container">
+        <%= link_to '編集', edit_openrec_path(@openrec), class: "openrec_text_show" %>
+        </div>
+        <!---->
+      <% end %>
+      <!---->
+      <div class="openrec_show05 container">
+      <%= link_to '戻る', openrecs_path, class: "openrec_text_show" %>
+      </div>
+      <!--Destroy---Edit---Back-->
+    </div>
+    <div class="openrec_show06">
+      <!--profile-->
+      <div class="openrec_show07">
+      <%= attachment_image_tag @openrec.user, :profile_image, fallback: "no-image.png", class: "profile_image_ph" %>
+      </div>
+      <!---->
+      <div class="openrec_show08">
+      <i class="fas fa-crown"></i><%= link_to @openrec.user.username, user_path(@openrec.user), class: "openrec_username" %>
+      </div>
+      <!--profile-->
+    </div>
+    <div class="openrec_show09">
+    <%= simple_format @user.profile %>
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+  
+</div>
+
+
+<div class="all_pc">
+  <div class="header_main">
+  <h1 class="tittle an2-fadeup">OPENREC.tv</h1>
+  </div>
+  <div class="openrec_show_pc00">
+  <iframe width="854" height="480" src="https://www.openrec.tv/live/<%= @openrec.openrec_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="openrec_show">  
+    <div class="openrec_show_c">
+      <!---->
+      <div class="openrec_show_pc01">
+      <%= @openrec.body %>
+      </div>
+      <!---->
+      <div class="openrec_pc_top">
+        <div class="openrec_pc">
+          <%= image_tag 'openrec.png', class: "openrec_pc_log" %>
+        </div>  
+        <div class="openrec_pc_url">
+        <a href="https://www.openrec.tv/live/<%= @openrec.openrec_url %>">https://www.openrec.tv/live/<%= @openrec.openrec_url %></a>
+        </div>
+      </div>
+      <div class="openrec_show_pc02">
+        <!--Destroy---Edit---Back-->
+        <% if @openrec.user.id == current_user.id %>
+          <!---->
+          <div class="openrec_show_pc03 container_pc">
+          <%= link_to '削除', @openrec, method: :delete, data: { confirm: 'Are you sure?' }, class: "openrec_text_show" %>
+          </div>
+          <!---->
+          <div class="openrec_show_pc04 container_pc">
+          <%= link_to '編集', edit_openrec_path(@openrec), class: "openrec_text_show" %>
+          </div>
+          <!---->
+        <% end %>
+        <!---->
+        <div class="openrec_show_pc05 container_pc">
+        <%= link_to '戻る', openrecs_path, class: "openrec_text_show" %>
+        </div>
+        <!--Destroy---Edit---Back-->
+      </div>
+    </div>
+    
+    <div class="openrec_show_pc06">
+      <div class="openrec_show_pc07">
+        <!--profile-->
+        <div class="openrec_show_pc08">
+        <%= attachment_image_tag @openrec.user, :profile_image, fallback: "no-image.png", class: "profile_image_ph" %>
+        </div>
+        <!---->
+        <div class="openrec_show_pc09">
+        <i class="fas fa-crown"></i><%= link_to @openrec.user.username, user_path(@openrec.user), class: "openrec_username" %>
+        </div>
+        <!--profile-->
+      </div>
+      <div class="openrec_show_pc10">
+      <%= simple_format @user.profile %>
+      </div>
+    </div>
+    
+  </div>
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>  
+  
+</div>
+</body>

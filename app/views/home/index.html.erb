@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cloudsquid</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--main--script-->
+    <script>
+    document.addEventListener("scroll", function () { 
+    const targetElement = document.querySelectorAll(".animationTarget");
+      // console.log('scroll event!');
+      for (let i = 0; i < targetElement.length; i++) {
+        const getElementDistance = targetElement[i].getBoundingClientRect().top + targetElement[i].clientHeight * 0.6;
+        if (window.innerHeight > getElementDistance) {
+          targetElement[i].classList.add("show");
+        }
+      }
+    });
+    </script>
+    <!--top--up--script-->
+    <script>
+    $(function(){
+      var pagetop = $('#page-top');
+      pagetop.hide();
+      $(window).scroll(function () {
+         if ($(this).scrollTop() > 100) {
+              pagetop.fadeIn();
+         } else {
+              pagetop.fadeOut();
+         }
+      });
+      pagetop.click(function () {
+         $('body, html').animate({ scrollTop: 0 }, 500);
+         return false;
+      });
+    });
+    </script>
+  </head>  
+<body>
+
+<!--ph-->
+<div class="all_ph">
+
+  <!--<div class="tittle">Cloud Squid.</div>-->
+  <div class="home_pc home_ph">
+    <%= image_tag 'splat3.png', class: "home_top" %>
+  </div>
+  <!--<div class="top_text">イカしたやつに、ならなイカ。</div>-->
+  <!--What's NEW-->
+  <section class="new">
+    
+      <div class="h2">
+      What's NEW
+      </div>
+      <div class="new01">
+        <div class="new02">
+          <span>Cloud Squidについて</span>
+        </div>
+          <p>上位勢の動画配信サイトをまとめ紹介するWEBアプリです。
+              
+              来年に発売予定の「splatoon 3」に向けて、現在活躍されている
+              
+              上位プレイヤーの皆様に事前登録を行って頂いています。
+              
+              発売まで最低限のコンテンツのみですがお許しください。
+              
+              splatoon3のコンテンツ内容が分かり次第アプリ内の機能追加を
+              
+              致しますのでお楽しみ下さい。
+              
+          </p>
+          
+        <div class="new02">
+          <span>下記に記されている上位プレイヤーの皆様へ</span>
+        </div>
+          <p>動画や大会記録等の投稿は自由でございます。
+             
+              発売までは自動で投稿いたしますが自動投稿拒否や要望等は
+              
+            <br>
+            「<a href="https://twitter.com/lemon0617tea">lemon tea <i class="fab fa-twitter"></i></a>」までＤＭをお願いします。
+          </p>
+      </div>
+  </section>
+  <!--MOVIE-->
+  <section class="movie">
+    <div class="h2">
+    MOVIE
+    </div>
+    <div class="movie01">
+      <div class="youtube">
+        <i class="fas fa-play-circle"></i><span>YouTube</span>
+      </div>
+      <div class="openrec">
+        <i class="fas fa-play-circle"></i><span>OPENREC.tv</span>
+      </div>
+      <div class="movie02">
+        <small>※配信サイトは配信者によって追加予定。</small>
+      </div>
+      <iframe width="100%" height="240" src="https://www.youtube.com/embed/GUYDXVDLmns" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </section>
+  <!--PLAYER-->
+  <section class="player">
+    <div class="h2">
+    PLAYER
+    </div>
+    <div class="image_player">
+    <%= image_tag 'koko.png', class: "image_player01" %>
+    </div>
+    <div class="player01">
+      
+      ぴょん、ちこたん、ミルクレープ、つくなみ、うどてん、じーぼーい、しろ、
+      ゆきむら、みかづき、らぁく、のぶなが、なるた、るか、Ｔぼう、
+      ふーらむん、ダイナモン、みじこーん、るんるんびーむ、coco、まさ、
+      まぎえーす、りーふ、りうくん、りぃれ、にくまん、のあつむり、スギ、
+      りみあ、ゆに、ツンデレ娘、RusK、はっち、てぃ、つむ、つみき、ゆうぎり、ひでよし、
+      ちゃふ、バズ、なのりー、つらら、たこぼん、シータ、なぽ、
+      らすく、まふゆ、れんたな、ばるかん、みけ、ひとひな、まめでん、えとな、ぴーす、
+      ばーどらいふ、くろす、あろえ、ぴよ、けいとぅーん、れき、るす、
+      あとばる、りるりーる、もは、しぇるたん、れいまる、ひなりーる、れんぞーん、のりすけ、
+      りうくん、スリュー、たいてぃあ、どんたこす、にんにく、ばこん、こたじ、
+      ちょこぺろ、ふーな、トド、ろー、ほのか、ぽちたま、はんじょう、よつば、のりしお、どん、
+      ダディコ、かぼす、かん、るなおんぷ、まっちゃあいす、すずらん、かぷちーの、
+      ゆゆし、えぬうら、うどんまん、らいすたかもり、いかげそうま、りりら、めっしー、らて、ごろ、
+      ひいらぎ、たいじ、やまみっちー、ぱーく、メロン、しめぴぃ、しょう、しゅい、くりっくす、しらたま、
+      まっちゃ、ぴの、ぼむ、ごっちゃそ、ここ、ひまじん、ちゃちゃ、ふみとし、
+      あいすめ、よもさーん、ちかし、しぜんまん、ろんつ、もめん、まーくん、カントリ、もっちー、めのめ、
+      いっちー、おたん、じゅじゅ、とっきー、かきもち、いくら、ぴょにー、かち、べんざえーす、ミルキー、
+      くさらて、さんえー、ふぐ、いろはぁす、こったー、
+      
+    </div>
+    <div class="player02">
+      etc...
+    </div>
+  </section>
+  
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+
+  
+</div>
+<!--pc-->
+<div class="all_pc">
+  <!--pc_header--img-->
+  <div class="header_main">
+    <div class="tittle an2-fadeup">Cloud Squid.</div>
+      <div class="home_pc home_ph an1-fadein">
+      <%= image_tag 'splat3.png', class: "home_top" %>
+    </div>
+  </div>
+
+  
+  <!--pc--main-->
+  <main>
+    <ul class="contents">
+      <!-- 1 -->
+      <li class="animationTarget">
+          <%= image_tag 'spla3.jpg', class: "img" %>
+          <div class="contentsText">
+              <h2>What's NEW</h2>
+              <p>- Cloud Squidについて -
+              
+              <br>
+              上位勢の動画配信サイトをまとめ紹介するWEBアプリです。来年に発売予定の「splatoon 3」に向けて、現在活躍されている上位プレイヤーの皆様に事前登録を行って頂いています。発売まで最低限のコンテンツのみですがお許しください。splatoon3のコンテンツ内容が分かり次第アプリ内の機能追加を致しますのでお楽しみ下さい。
+              </p>
+          </div>
+      </li>
+      <!-- 2 -->
+      <li class="animationTarget">
+          <%= link_to plays_path, class: "" do %>
+          <%= image_tag 'rusu.jpg', class: "img" %>
+          <% end %>
+          <div class="contentsText">
+              <h2>ABOUT</h2>
+              <p>- 上位プレイヤーの皆様へ -
+              <br>動画や大会記録等の投稿は自由でございます。発売までは自動で投稿いたしますが自動投稿拒否や要望等は「lemon tea 」までＤＭをお願いします。</p>
+          </div>
+      </li> 
+      <!-- 3 -->
+      <li class="animationTarget">
+          <!--<%= image_tag 'koko.png', class: "img" %>-->
+          <%= link_to users_path, class: "players_tops_t" do %>
+          <div class="img players_tops">
+            
+            ぴょん、ちこたん、ミルクレープ、つくなみ、うどてん、じーぼーい、しろ、
+            ゆきむら、みかづき、らぁく、のぶなが、なるた、るか、Ｔぼう、
+            ふーらむん、ダイナモン、みじこーん、るんるんびーむ、coco、まさ、
+            まぎえーす、りーふ、りうくん、りぃれ、にくまん、のあつむり、スギ、
+            りみあ、ゆに、ツンデレ娘、RusK、はっち、てぃ、つむ、つみき、ゆうぎり、ひでよし、
+            ちゃふ、バズ、なのりー、つらら、たこぼん、シータ、なぽ、
+            らすく、まふゆ、れんたな、ばるかん、みけ、ひとひな、まめでん、えとな、ぴーす、
+            ばーどらいふ、くろす、あろえ、ぴよ、けいとぅーん、れき、るす、
+            あとばる、りるりーる、もは、しぇるたん、れいまる、ひなりーる、れんぞーん、のりすけ、
+            りうくん、スリュー、たいてぃあ、どんたこす、にんにく、ばこん、こたじ、
+            ちょこぺろ、ふーな、トド、ろー、ほのか、ぽちたま、はんじょう、よつば、のりしお、どん、
+            ダディコ、かぼす、かん、るなおんぷ、まっちゃあいす、すずらん、かぷちーの、
+            ゆゆし、えぬうら、うどんまん、らいすたかもり、いかげそうま、りりら、めっしー、らて、ごろ、
+            ひいらぎ、たいじ、やまみっちー、ぱーく、メロン、しめぴぃ、しょう、しゅい、くりっくす、しらたま、
+            まっちゃ、ぴの、ぼむ、ごっちゃそ、ここ、ひまじん、ちゃちゃ、ふみとし、
+            あいすめ、よもさーん、ちかし、しぜんまん、ろんつ、もめん、まーくん、カントリ、もっちー、めのめ、
+            いっちー、おたん、じゅじゅ、とっきー、かきもち、いくら、ぴょにー、かち、べんざえーす、ミルキー、
+            くさらて、さんえー、ふぐ、いろはぁす、こったー.....etc...
+            
+          </div>
+          <% end %>
+          <div class="contentsText">
+              <h2>PLAYER</h2>
+              <p>splatoon2で上位第一線で活躍されているプレイヤーの皆様です</p>
+          </div>
+      </li>
+      <!-- 4 -->
+      <!--<li class="animationTarget">-->
+      <!--    <%= image_tag 'splat3.png', class: "img" %>-->
+      <!--    <div class="contentsText">-->
+      <!--        <h2>title</h2>-->
+      <!--        <p>aaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>-->
+      <!--    </div>-->
+      <!--</li>-->
+    </ul>
+
+  </main>
+<div class="slide" id="makeImg">
+  <%= image_tag 'koko.png', class: "img" %>
+  <%= image_tag 'rusu.jpg', class: "img" %>
+  <%= image_tag 'koko2.jpg', class: "img" %>
+</div>  
+  <!---->
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>

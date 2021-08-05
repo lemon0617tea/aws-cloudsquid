@@ -1,0 +1,146 @@
+<body>
+
+
+
+<div class="all_ph"> 
+  <div class="home_pc home_ph">
+    <%= image_tag 'splat3.png', class: "home_top" %>
+  </div>
+  
+  <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      
+        <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+  <% end %>
+  <!---->
+  <%= form_for @post do |form| %>
+  <div class="form-wrapper">
+    <div class="h1">New Youtube</div>
+    <form>
+      <!---->
+      <div class="form-item">
+      <%= form.label :name, "name", class: "label" %>
+      <%= form.text_field :name, class: "input" %>
+      </div>
+      <!---->
+      <div class="form-item">
+      <%= form.label :body, "内容", class: "label" %>
+      <%= form.text_area :body, class: "textarea_play_new" %>
+      </div>
+      <!---->
+      <div class="form-item">
+      <%= form.label :youtube_url, "youtube URL", class: "label" %>
+      <%= form.text_field :youtube_url, class: "input" %>
+      </div>
+      <!---->
+      <div class="button-panel">
+      <%= form.submit '投稿', class: "button" %>
+      </div>
+      <!---->
+      <div class="form-footer">
+      <%= link_to '戻る', posts_path %>
+      </div>
+    </form>
+  </div>
+  <% end %>
+  <!---->
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+  
+</div>  
+
+<!--pc-->
+
+<div class="all_pc"> 
+  <div class="header_main">
+  <h1 class="tittle an2-fadeup">Youtube</h1>
+  </div>
+  
+  <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      
+        <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+  <% end %>
+  <!---->
+  <%= form_for @post do |form| %>
+  <div class="form-wrapper">
+    <div class="h1">New Youtube</div>
+    <form>
+      <!---->
+      <div class="form-item">
+      <%= form.label :name, "name", class: "label" %>
+      <%= form.text_field :name, class: "input" %>
+      </div>
+      <!---->
+      <div class="form-item">
+      <%= form.label :body, "内容", class: "label" %>
+      <%= form.text_area :body, class: "textarea_play_new" %>
+      </div>
+      <!---->
+      <div class="form-item">
+      <%= form.label :youtube_url, "youtube URL", class: "label" %>
+      <%= form.text_field :youtube_url, class: "input" %>
+      </div>
+      <!---->
+      <div class="button-panel">
+      <%= form.submit '投稿', class: "button" %>
+      </div>
+      <!---->
+      <div class="form-footer">
+      <%= link_to '戻る', posts_path %>
+      </div>
+    </form>
+  </div>
+  <% end %>
+  <!---->
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+  
+</div>  
+</body>

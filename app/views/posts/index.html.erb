@@ -1,0 +1,111 @@
+<body>
+  
+<!--ph  -->
+<div class="all_ph">
+  
+  <div class="Youtube_index_t">
+  <h1>Youtube</h1>
+  </div>
+  <div class="youtube_index">
+  <% @posts.each do |post| %>
+    <div class="youtube_index01">
+      <!---->
+      <div class="youtube_index02">
+      <iframe width="100%" height="240" src="https://www.youtube.com/embed/<%=post.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <!---->
+      <div class="youtube_index03">
+        <!---->
+        <div class="youtube_index04">
+        <%= attachment_image_tag post.user, :profile_image, fallback: "no-image.png", class: "profile_image_ph" %>
+        </div>
+        <!---->
+        <div class="youtube_index05">
+          <!---->
+          <div class="youtube_index06">
+          <%= post.body %>
+          </div>    
+          <!---->
+          <div class="youtube_index07">
+          <i class="fas fa-crown"></i><%= link_to post.user.username, user_path(post.user), class: "post_username" %>
+          </div>
+          <!---->
+        </div> 
+        <!---->
+      </div>  
+      <div class="youtube_index08">
+      <%= link_to '詳細へ >', post, class: "post_text" %>
+      </div>
+      <!---->
+    </div>  
+  <% end %>
+  </div>
+  <!--new_btn-->
+  <div class="fixed_btn">
+    <%= link_to new_post_path, class: "new_btn" do %>  
+    <i class="fas fa-paper-plane"></i>
+    <% end %>
+  </div>
+</div>
+
+<!--pc-->
+<div class="all_pc">
+  
+  <div class="header_main">
+  <h1 class="tittle an2-fadeup">Youtube</h1>
+  </div>
+  <div class="youtube_index_pc00">
+    <% @posts.each do |post| %>
+    <div class="youtube_index_pc">
+      <div class="youtube_index_pc01">
+      <iframe width="426" height="240" src="https://www.youtube.com/embed/<%=post.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="youtube_index_pc02">
+        <!---->
+        <div class="youtube_index_pc03">
+        <%= attachment_image_tag post.user, :profile_image, fallback: "no-image.png", class: "profile_image_ph" %>
+        </div>
+        <!---->
+        <div class="youtube_index_pc04">
+          <!---->
+          <div class="youtube_index_pc05">
+          <%= post.body %>
+          </div>
+          <!---->
+          <div class="youtube_index_pc06">
+          <i class="fas fa-crown"></i><%= link_to post.user.username, user_path(post.user), class: "post_username" %>
+          </div>
+          <!---->
+        </div>
+      </div> 
+      <!---->
+      <div class="youtube_index_pc07">
+      <%= link_to '詳細へ >', post, class: "post_text" %>
+      </div>
+      <!---->
+    </div>
+    <% end %>
+  </div>
+<!--new_btn-->
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+  
+</div>
+</body>

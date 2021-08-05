@@ -1,0 +1,140 @@
+<body>
+
+<!--<h1>Plays#show</h1>-->
+<!--<p>Find me in app/views/plays/show.html.erb</p>-->
+
+
+<div class="all_ph">
+    <div class="plays_show">
+        <!---->
+        <div class="plays_show01">
+        <%= attachment_image_tag @play, :image, class: "plays_image" %>
+        </div>
+        <div class="notification_ph">
+        <p id="notice"><%= notice %></p>
+        </div>
+        <div class="plays_show00">
+            <!---->
+            <div class="plays_show02">
+            <%= @play.title %>
+            </div>
+            <!---->
+            <div class="plays_show03">
+            <%= simple_format @play.body, class: "" %>
+            </div>
+            <!---->
+            <% if @play.user.id == current_user.id %>
+                <div class="plays_show04 container">
+                <%= link_to "編集へ", edit_play_path(@play), class: "plays_text_show" %>
+                </div>
+            <% end %>
+            <!---->
+            <div class="plays_show05">
+                <div class="plays_show06">
+                <%= attachment_image_tag @play.user, :profile_image, fallback: "no-image.png", class: "profile_image_ph" %>
+                </div>
+                <!---->
+                <div class="plays_show07">
+                <i class="fas fa-crown"></i><%= @play.user.username %>
+                </div>
+            </div>
+            <!---->
+            <div class="plays_show08">
+            <%= simple_format @play.user.profile, class: "" %>
+            </div>
+            <!---->
+            <div class="plays_show09">
+            <%= link_to user_path(@play.user), class: "plays_text_show01" do %>
+            <%= @play.user.username %> さんのページへ
+            <% end %>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer01">
+        <p id="page-top"><a href="#">↑</a></p>
+        </div>
+        <div class="footer02">
+          <div class="h3">
+            <p></p>
+          </div>
+          <div class="footer03">
+          <a href="#" class="btn-social-long-twitter">
+            <i class="fab fa-twitter"></i> <span>Follow Me</span>
+          </a>
+          </div>
+        </div>
+        <div class="Copyright">
+          <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+        </div>
+    </footer>
+</div>
+
+<!--pc-->
+
+<div class="all_pc">
+    <div class="header_main">
+    <h1 class="tittle an2-fadeup">About</h1>
+    </div>
+  
+    <div class="plays_show">
+        <!---->
+        <div class="plays_show01">
+        <%= attachment_image_tag @play, :image, class: "plays_image" %>
+        </div>
+        <div class="plays_show00">
+            <!---->
+            <div class="plays_show02">
+            <%= @play.title %>
+            </div>
+            <!---->
+            <div class="plays_show03">
+            <%= simple_format @play.body, class: "" %>
+            </div>
+            <!---->
+            <% if @play.user.id == current_user.id %>
+                <div class="plays_show04 container">
+                <%= link_to "編集へ", edit_play_path(@play), class: "plays_text_show" %>
+                </div>
+            <% end %>
+            <!---->
+            <div class="plays_show05">
+                <div class="plays_show06">
+                <%= attachment_image_tag @play.user, :profile_image, fallback: "no-image.png", class: "profile_image_ph" %>
+                </div>
+                <!---->
+                <div class="plays_show07">
+                <i class="fas fa-crown"></i><%= link_to @play.user.username,user_path(@play.user), class: "plays_username" %>
+                </div>
+            </div>
+            <!---->
+            <div class="plays_show08">
+            <%= simple_format @play.user.profile, class: "" %>
+            </div>
+            <!---->
+        </div>
+    </div>
+
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+
+</div>
+</body>

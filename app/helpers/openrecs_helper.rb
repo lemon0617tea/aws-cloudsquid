@@ -1,0 +1,2 @@
+module OpenrecsHelper
+end

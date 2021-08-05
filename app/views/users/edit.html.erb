@@ -1,0 +1,159 @@
+<body>
+    
+    
+<div class="all_ph">   
+  <div class="home_pc home_ph">
+    <%= image_tag 'splat3.png', class: "home_top" %>
+  </div>
+
+<!--<h1>Users#edit</h1>-->
+<!--<p>Find me in app/views/users/edit.html.erb</p>-->
+
+<% if @user.errors.any? %>
+  <div class="notification">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <div class="form-wrapper">
+    <div class="h1">Editing My Page</div>
+    <form>
+      <!---->
+    <div class="form-item">
+    <%= f.label :username, "ユーザー名", class: "label" %>
+    <%= f.text_field :username, class: "input" %>
+    </div>
+    <!---->
+    <div class="form-item">
+    <%= f.label :email, "メールアドレス", class: "label" %>
+    <%= f.email_field :email, class: "input" %>
+    </div>
+    <!---->
+    <div class="form-item">
+    <%= f.label :profile, "プロフィール", class: "label" %>
+    <%= f.text_area :profile, class: "textarea_play_new" %>
+    </div>
+    <!---->
+    <div class="form-item">
+    <%= f.label :profile_image, "プロフィール画像", class: "label" %>
+    <%= f.attachment_field :profile_image, class: "input" %>
+    </div>
+    <!---->
+    <div class="button-panel">
+    <%= f.submit "更新", class: "button" %>
+    </div>
+    <!---->
+    <div class="form-footer">
+      <p><a><%= link_to "ホーム", root_path, class: "" %></a></p>
+    </div>
+    <!---->
+   </form>
+  </div>    
+<% end %>
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+  
+</div>
+<!--pc-->
+
+<div class="all_pc">   
+  <div class="header_main">
+    <h1 class="tittle an2-fadeup">Edit</h1>
+  </div>
+
+<!--<h1>Users#edit</h1>-->
+<!--<p>Find me in app/views/users/edit.html.erb</p>-->
+
+<% if @user.errors.any? %>
+  <div class="notification">
+    <h2><%= pluralize(@user.errors.count, "error") %> prohibited this object from being saved: not successfully</h2>
+    <ul>
+      <% @user.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @user do |f| %>
+  <div class="form-wrapper">
+    <div class="h1">Editing My Page</div>
+    <form>
+      <!---->
+    <div class="form-item">
+    <%= f.label :username, "ユーザー名", class: "label" %>
+    <%= f.text_field :username, class: "input" %>
+    </div>
+    <!---->
+    <div class="form-item">
+    <%= f.label :email, "メールアドレス", class: "label" %>
+    <%= f.email_field :email, class: "input" %>
+    </div>
+    <!---->
+    <div class="form-item">
+    <%= f.label :profile, "プロフィール", class: "label" %>
+    <%= f.text_area :profile, class: "textarea_play_new" %>
+    </div>
+    <!---->
+    <div class="form-item">
+    <%= f.label :profile_image, "プロフィール画像", class: "label" %>
+    <%= f.attachment_field :profile_image, class: "input" %>
+    </div>
+    <!---->
+    <div class="button-panel">
+    <%= f.submit "更新", class: "button" %>
+    </div>
+    <!---->
+    <div class="form-footer">
+      <p><a><%= link_to "ホーム", root_path, class: "" %></a></p>
+    </div>
+    <!---->
+   </form>
+  </div>    
+<% end %>
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+  
+</div>
+
+</body>

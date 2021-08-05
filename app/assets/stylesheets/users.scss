@@ -1,0 +1,127 @@
+// Place all the styles related to the users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.plays_index_t{
+    width: 95%;
+    padding: 20px 0px 0px 10px;
+}
+
+.users_index_ph{
+    padding: 20px 0px 20px 0px;
+}
+
+.users_index{
+    width: 60%;
+    margin: auto;
+    display: flex;
+    padding: 10px 0px 10px 0px;
+    border-bottom: dotted 2px dimgray;
+}
+.users_index02{
+    letter-spacing: 1px;
+    padding: 23px 0px 0px 15px;
+    font-weight: bold;
+}
+.users_index02 i{
+    color: #FFF021;
+}
+.user_username{
+    color: black;
+    text-decoration: none;
+    padding: 0px 0px 0px 10px;
+}
+// show--------------------------------
+.users_show{
+    width: 95%;
+    margin: auto;
+    padding: 10px 0px 0px 0px;
+    letter-spacing: 1px;
+}
+.users_show01{
+    display: flex;
+}
+.users_show03{
+    padding: 23px 0px 0px 20px;
+    font-weight: bold;
+}
+.users_show04 i{
+    color: #FFF021;
+    padding: 0px 10px 0px 0px;
+}
+.users_show05{
+    padding: 5px 0px 0px 0px;
+}
+.users_show06{
+    padding: 8px 0px 5px 0px;
+}
+
+.users_show07{
+    font-size: 14px;
+}
+
+.user_text_show{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: #AA1BFF;
+    font-size: 14px;
+    line-height: 40px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #AA1BFF;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0px 10px 0px 0px;
+    border-radius: 25px;
+}
+.users_show07{
+    border-top: dotted 2px dimgray;
+    border-bottom: dotted 2px dimgray;
+    padding: 5px 0px 5px 0px;
+}
+
+// show記録-----------------------------
+.users_show_plays{
+    width: 100%;
+    padding: 10px 0px 20px 0px;
+}
+.image_users{
+    width: 100%;
+}
+.users_show_plays02{
+    display: flex;
+    justify-content: space-around;
+    
+}
+.users_text_show{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: #AA1BFF;
+    font-size: 14px;
+    line-height: 40px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+.users_text_show:hover{
+    opacity: 1;
+}
+
+.users_show_plays06{
+    width: 95%;
+    margin: auto;
+    padding: 0px 0px 10px 0px;
+    letter-spacing: 1px;
+    font-size: 14px;
+}

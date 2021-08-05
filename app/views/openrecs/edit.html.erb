@@ -1,0 +1,146 @@
+<body>
+
+
+<div class="all_ph">  
+  <div class="home_pc home_ph">
+    <%= image_tag 'splat3.png', class: "home_top" %>
+  </div>
+  
+  <% if @openrec.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@openrec.errors.count, "error") %> prohibited this openrec from being saved:</h2>
+  
+      <ul>
+      <% @openrec.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <%= form_for @openrec do |form| %>
+    <div class="form-wrapper">
+      <div class="h1">Editing OPENREC.tv</div>
+      <form>
+      <!---->
+      <div class="form-item">
+        <%= form.label :name, "name", class: "label" %>
+        <%= form.text_field :name, class: "input" %>
+      </div>
+      <!---->
+      <div class="form-item">
+        <%= form.label :body, "内容", class: "label" %>
+        <%= form.text_area :body, class: "textarea_play_new" %>
+      </div>
+      <!---->
+      <div class="form-item">
+        <%= form.label :openrec_url, "OPENREC.tv", class: "label" %>
+        <%= form.text_field :openrec_url, class: "input" %>
+      </div>
+      <!---->
+      <div class="button-panel">
+        <%= form.submit '更新', class: "button" %>
+      </div>
+      <!---->
+      <div class="form-footer">
+      <p><a><%= link_to '詳細へ', @openrec %></a></p>
+      <p><a><%= link_to '一覧へ', openrecs_path %></a></p>
+      </div>
+      <!---->
+     </form>
+    </div>
+  <% end %>
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+  
+</div>
+<!--pc-->
+
+<div class="all_pc">  
+  <div class="header_main">
+    <h1 class="tittle an2-fadeup">Edit</h1>
+  </div>
+
+<% if @openrec.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@openrec.errors.count, "error") %> prohibited this openrec from being saved:</h2>
+
+    <ul>
+    <% @openrec.errors.full_messages.each do |message| %>
+      <li><%= message %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_for @openrec do |form| %>
+  <div class="form-wrapper">
+    <div class="h1">Editing OPENREC.tv</div>
+    <form>
+    <!---->
+    <div class="form-item">
+      <%= form.label :name, "name", class: "label" %>
+      <%= form.text_field :name, class: "input" %>
+    </div>
+    <!---->
+    <div class="form-item">
+      <%= form.label :body, "内容", class: "label" %>
+      <%= form.text_area :body, class: "textarea_play_new" %>
+    </div>
+    <!---->
+    <div class="form-item">
+      <%= form.label :openrec_url, "OPENREC.tv", class: "label" %>
+      <%= form.text_field :openrec_url, class: "input" %>
+    </div>
+    <!---->
+    <div class="button-panel">
+      <%= form.submit '更新', class: "button" %>
+    </div>
+    <!---->
+    <div class="form-footer">
+    <p><a><%= link_to '詳細へ', @openrec %></a></p>
+    <p><a><%= link_to '一覧へ', openrecs_path %></a></p>
+    </div>
+    <!---->
+   </form>
+  </div>
+<% end %>
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+  
+</div>
+</body>

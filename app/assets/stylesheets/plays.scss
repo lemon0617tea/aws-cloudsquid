@@ -1,0 +1,125 @@
+// Place all the styles related to the plays controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.plays_index{
+    width: 100%;
+}
+.plays_index01{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+.plays_index02{
+    width: 100%;
+}
+.plays_image{
+    width: 100%;
+}
+.plays_index03{
+    display: flex;
+    padding: 10px 0px 0px 0px;
+}
+.plays_index05{
+    padding: 0px 0px 0px 20px;
+    letter-spacing: 1px;
+}
+.plays_index07{
+    padding: 5px 0px 0px 0px;
+    font-weight: bold;
+}
+.plays_index07 i{
+    color: #FFF021;
+}
+.plays_username{
+    color: black;
+    text-decoration: none;
+    padding: 0px 0px 0px 10px;
+}
+// show--------------------------------
+.plays_show{
+    width: 100%;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+}
+.plays_show01{
+    width: 100%;
+    margin: auto;
+}
+.plays_show00{
+    width: 95%;
+    margin: auto;
+    padding: 10px 0px 0px 0px;
+}
+.plays_show02{
+    font-weight: bold;
+}
+.plays_show04{
+    text-align: center;
+}
+.plays_text_show{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: #AA1BFF;
+    font-size: 14px;
+    line-height: 40px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #AA1BFF;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0px 10px 0px 0px;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+.plays_text_show:hover{
+    opacity: 1;
+}
+
+.plays_show05{
+    display: flex;
+    border-top: dotted 2px dimgray;
+    padding: 10px 0px 0px 0px;
+}
+.plays_show07{
+    padding: 20px 0px 0px 20px;
+    font-weight: bold;
+}
+.plays_show07 i{
+    color: #FFF021;
+    padding: 0px 5px 0px 0px;
+}
+
+.plays_show08{
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.plays_show09{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+}
+.plays_text_show01{
+    display: inline-block;
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    background-color: #AA1BFF;
+    font-size: 14px;
+    line-height: 40px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #AA1BFF;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0px 10px 0px 0px;
+    border-radius: 25px;
+}

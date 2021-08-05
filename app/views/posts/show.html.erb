@@ -1,0 +1,154 @@
+<body>
+
+
+<!--ph-->
+<div class="all_ph">
+  <div class="youtube_show01">
+    <iframe width="100%" height="240" src="https://www.youtube.com/embed/<%= @post.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <div class="notification_ph">
+  <p id="notice"><%= notice %></p>
+  </div>  
+  <div class="youtube_show">  
+    <!---->
+    <div class="youtube_show01">
+    <%= @post.body %>
+    </div>
+    <!---->
+    <div class="youtube_show02">
+      <!--Destroy---Edit---Back-->
+      <% if @post.user.id == current_user.id %>
+        <!---->
+        <div class="youtube_show03 container">
+        <%= link_to '削除', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "post_text_show" %>
+        </div>
+        <!---->
+        <div class="youtube_show04 container">
+        <%= link_to '編集', edit_post_path(@post), class: "post_text_show" %>
+        </div>
+        <!---->
+      <% end %>
+      <!---->
+      <div class="youtube_show05 container">
+      <%= link_to '戻る', posts_path, class: "post_text_show" %>
+      </div>
+      <!--Destroy---Edit---Back-->
+    </div>
+    <div class="youtube_show06">
+      <!--profile-->
+      <div class="youtube_show07">
+      <%= attachment_image_tag @post.user, :profile_image, fallback: "no-image.png", class: "profile_image_ph" %>
+      </div>
+      <!---->
+      <div class="youtube_show08">
+      <i class="fas fa-crown"></i><%= link_to @post.user.username, user_path(@post.user), class: "post_username" %>
+      </div>
+      <!--profile-->
+    </div>
+    <div class="youtube_show09">
+    <%= simple_format @user.profile %>
+    </div>
+  </div>
+  <!---->
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+  <!---->
+</div>
+
+
+<!--pc-->
+
+
+
+<div class="all_pc">
+  <div class="header_main">
+    <h1 class="tittle an2-fadeup">Youtube</h1>
+  </div>
+  <!---->
+  <div class="youtube_show_pc00">
+    <iframe width="1280" height="720" src="https://www.youtube.com/embed/<%= @post.youtube_url%>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+  <!---->
+  <div class="youtube_show_pc01">  
+    <div class="youtube_show_pc02">
+      <div class="youtube_show_pc03">
+        <!---->
+        <div class="youtube_show_pc04">
+        <%= @post.body %>
+        </div>
+        <!---->
+        <!--Destroy---Edit---Back-->
+        <% if @post.user.id == current_user.id %>
+        <!---->
+        <div class="youtube_show_pc05 container_pc">
+        <%= link_to '削除', @post, method: :delete, data: { confirm: 'Are you sure?' }, class: "post_text_show" %>
+        </div>
+        <!---->
+        <div class="youtube_show_pc06 container_pc">
+        <%= link_to '編集', edit_post_path(@post), class: "post_text_show" %>
+        </div>
+        <!---->
+        <% end %>
+        <!---->
+        <div class="youtube_show_pc07 container_pc">
+        <%= link_to '戻る', posts_path, class: "post_text_show" %>
+        </div>
+        <!--Destroy---Edit---Back-->
+      </div>
+      <div class="youtube_show_pc08">
+        <div class="youtube_show_pc09">
+          <!--profile-->
+          <div class="youtube_show_pc10">
+          <%= attachment_image_tag @post.user, :profile_image, fallback: "no-image.png", class: "profile_image_ph" %>
+          </div>
+          <!---->
+          <div class="youtube_show_pc11">
+          <i class="fas fa-crown"></i><%= link_to @post.user.username, user_path(@post.user), class: "post_username" %>
+          </div>
+          <!---->
+        </div>
+        <!--profile-->
+        <div class="youtube_show_pc12">
+        <%= simple_format @user.profile %>
+        </div>
+      </div>
+    </div>
+  </div>
+<!---->
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+<!---->
+</div>
+</body>

@@ -1,0 +1,165 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.h2{
+    font-family: century-gothic, 'Noto Sans JP', sans-serif;
+    font-size: 30px;
+    width: 300px;
+    background: linear-gradient(transparent 60%, #FFF021 50%);
+    margin: 0px 0px 10px 10px;
+
+}
+.h3{
+    font-family: century-gothic, 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    padding: 0px 0px 5px 20px;
+    
+}
+// .top_text{
+//     font-size: 23px;
+//     margin: 20px 40px 40px 40px;
+//     padding: 1rem 2rem;
+//     -webkit-transform: skew(-15deg);
+//     transform: skew(-15deg);
+//     color: #FFF021;
+//     text-align: center;
+//     letter-spacing: 3px;
+//     font-weight: bold;
+//     background-image: linear-gradient(to right, black 0%, black 100%);
+// }
+// NEW------------------------------
+.new{
+    padding: 40px 0px 40px 0px;
+}
+.new01{
+    background-color: white;
+    margin: auto 10px;
+    text-align: center;
+    padding: 5px 0px 15px 0px;
+}
+.new01 p{
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.new01 a{
+    text-decoration: none;
+    color: #1DA1F2;
+    font-weight: bold;
+    font-size: 15px;
+}
+.new02{
+    font-weight: bold;
+    font-size: 15px;
+    padding: 10px 0px 10px 0px;
+    
+}
+// movie----------------------------
+.movie{
+    padding: 0px 0px 40px 0px;
+    
+}
+.movie01{
+    margin: auto 10px;
+    
+}
+.movie .youtube{
+    font-size: 20px;
+    letter-spacing: 1px;
+    background-color: white;
+    height: 50px;
+    margin-bottom: 1px;
+    padding: 15px 0px 0px 30px;
+}
+.movie .openrec{
+    font-size: 20px;
+    letter-spacing: 1px;
+    background-color: white;
+    height: 50px;
+    margin-bottom: 1px;
+    padding: 15px 0px 0px 30px;
+}
+.youtube i{
+    padding: 0px 80px 0px 0px;
+}
+.openrec i{
+    padding: 0px 80px 0px 0px;
+}
+.movie02{
+    padding: 3px 0px 20px 0px;
+}
+.player{
+    padding: 0px 0px 40px 0px;
+}
+.player01{
+    margin: auto 30px;
+}
+.player02{
+    text-align: center;
+}
+.image_player{
+    width: 90%;
+    margin: auto;
+    padding: 10px 0px 10px 0px;
+}
+.image_player01{
+    width: 100%;
+    margin: auto;
+}
+// footer------------------------
+footer{
+    background-color: white;
+}
+.footer01{
+    padding: 50px 0px 50px 0px;
+}
+.footer02{
+    display: flex;
+    justify-content: space-between;
+}
+.footer03{
+    padding: 0px 50px 5px 0px;
+}
+.footer03 a{
+    text-decoration: none;
+    font-size: 25px;
+    color: #1DA1F2;
+}
+// 
+#page-top {
+//   position: fixed;
+//   bottom: 20px;
+//   right: 20px;
+  font-size: 30px;
+  line-height: 1;
+//   z-index: 99;
+}
+#page-top a {
+  background: #FFF021;
+  text-decoration: none;
+  color: black;
+  width: 60px;
+  padding: 15px 5px;
+  text-align: center;
+  display: block;
+  border-radius: 50%;
+  opacity: 0.9;
+  transition: all .6s ease;
+  margin: 0 auto;
+  font-weight: bold;
+}
+#page-top a:hover {
+  text-decoration: none;
+  opacity: .5;
+}
+
+.Copyright{
+    font-size: 16px;
+    text-align: center;
+    padding: 50px 0px 50px 0px;
+    border-top: solid 1px black;
+}
+
+
+
+// pc----------------------------

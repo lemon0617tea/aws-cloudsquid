@@ -1,0 +1,143 @@
+<body>
+  
+  
+<div class="all_ph">
+  <div class="home_pc home_ph">
+    <%= image_tag 'splat3.png', class: "home_top" %>
+  </div>
+    
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+    <div class="form-wrapper">
+      <div class="h1">Sign In</div>
+      <form>
+        
+        <div class="form-item">
+        <%= f.label :username %><br />
+        <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
+        </div>
+        
+        <div class="form-item">
+        <%= f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+    
+        <div class="form-item">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password" %>
+        </div>
+        
+        <div class="form-item">
+        <%= f.label :password_confirmation %><br />
+        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+        </div>
+          
+        <div class="button-panel">
+          
+          <%= f.submit "Sign up", class: "button" %>
+          
+        </div>
+      </form>
+      
+      <div class="form-footer">
+        <p><a><%= link_to "Log In", new_user_session_path, class: "" %></a></p>
+      </div>
+      
+    </div>
+  <% end %>
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+
+</div>
+<!--pc-->
+
+
+<div class="all_pc">
+  <div class="header_main">
+    <h1 class="tittle an2-fadeup">Sign In</h1>
+  </div>
+  
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+<%= render "devise/shared/error_messages", resource: resource %>
+  <div class="form-wrapper">
+    <div class="h1">Sign In</div>
+    <form>
+      
+      <div class="form-item">
+      <%= f.label :username %><br />
+      <%= f.text_field :username, autofocus: true, autocomplete: "username" %>
+      </div>
+      
+      <div class="form-item">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+  
+      <div class="form-item">
+        <%= f.label :password %>
+        <% if @minimum_password_length %>
+        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <% end %><br />
+        <%= f.password_field :password, autocomplete: "new-password" %>
+      </div>
+      
+      <div class="form-item">
+      <%= f.label :password_confirmation %><br />
+      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      </div>
+        
+      <div class="button-panel">
+        
+        <%= f.submit "Sign up", class: "button" %>
+        
+      </div>
+    </form>
+    
+    <div class="form-footer">
+      <p><a><%= link_to "Log In", new_user_session_path, class: "" %></a></p>
+    </div>
+    
+  </div>
+<% end %>
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+  
+</div>
+</body>

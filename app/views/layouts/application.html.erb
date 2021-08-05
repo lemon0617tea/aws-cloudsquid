@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cloud squid</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha256-UzFD2WYH2U1dQpKDjjZK72VtPeWP50NoJjd26rnAdUI=" crossorigin="anonymous" />
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script>
+    </script>
+    <script>
+
+    </script>
+    <script>
+    $(function() {
+    setTimeout("$('.flash').fadeOut('slow')", 3000);
+    });
+    </script>
+  </head>
+
+<body>
+    
+<!--pc-header -->
+<div class="all_pc">   
+<% if user_signed_in? %>    
+    <div class="header_pc01">
+        <div class="header_pc02">
+            <%= link_to "Home", root_path, class: "left_btn" %>
+            <%= link_to "About", plays_path, class: "left_btn" %>
+            <%= link_to "Player", users_path, class: "left_btn" %>
+            <%= link_to 'YouTube', posts_path, class: "left_btn" %>
+            <%= link_to 'OPENREC.tv', openrecs_path, class: "left_btn" %>
+        </div>
+        <div class="header_pc03">
+            <%= link_to "マイページ", user_path(current_user), class: "right_btn" %> 
+            <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "right_btn" %>
+        <!---->
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <!--ここからメニュー-->
+                <div class="menu-content">
+                    <div class="hamburger-menu-header">
+                        <div class="hamburger_menu_title">
+                            <%= link_to "Cloud Squid", root_path, class: "menu-title" %>
+                        </div>
+                        <div class="hamburger-menu-log">
+                            <div>
+                                <%= link_to "マイページ", user_path(current_user), class: "menu-log h_btn" %>
+                            </div>
+                            <div>
+                                <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "menu-log h_btn" %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hamburger_menu_main">
+                        <div>    
+                            <%= link_to "TOP", root_path, class: "menu-main h_btn" %>
+                        </div>
+                        <div>
+                            <%= link_to "ABOUT", plays_path, class: "menu-main h_btn" %>
+                        </div>
+                        <div>
+                            <%= link_to 'YOUTUBE', posts_path, class: "menu-main h_btn" %>
+                        </div>
+                        <div>
+                            <%= link_to 'OPENREC.tv', openrecs_path, class: "menu-main h_btn" %>
+                        </div>
+                        <div>
+                            <%= link_to "PLAYER", users_path, class: "menu-main h_btn" %>
+                        </div>
+                    </div>
+                    <div class="hamburger_menu_sns">
+                        <span>CONTACT SNS</span>
+                        <div>
+                        <a href="#" class="h_btn"><i class="fab fa-twitter"></i>Twitter</a>
+                        </div>
+                    </div>
+                    <div class="hamburger_menu_new">
+                        <span>NEW POST</span>
+                        <div>
+                            <%= link_to "ABOUT NEW", new_play_path, class: "menu-new h_btn" %>    
+                        </div>
+                        <div>
+                            <%= link_to "YOUTUBE NEW", new_post_path, class: "menu-new h_btn" %>
+                        </div>
+                        <div>
+                            <%= link_to "OPENREC NEW", new_openrec_path, class: "menu-new h_btn" %>
+                        </div>
+                    </div>
+                
+                </div>
+                <!--ここまでメニュー-->
+            </div>       
+        <!---->
+        </div>
+    </div> 
+<% else %>
+    <div class="header_pc01">
+        <div class="header_pc02">
+            <%= link_to "Home", root_path, class: "left_btn" %>
+            <%= link_to "About", plays_path, class: "left_btn" %>
+            <%= link_to "Player", users_path, class: "left_btn" %>
+            <%= link_to 'YouTube', posts_path, class: "left_btn" %>
+            <%= link_to 'OPENREC.tv', openrecs_path, class: "left_btn" %>
+        </div>
+        <div class="header_pc03">
+            <%= link_to "ログイン", new_user_session_path, class: "right_btn" %>
+            <%= link_to "新規登録", new_user_registration_path, class: "right_btn" %>
+        <!---->
+            <div class="hamburger-menu">
+                <input type="checkbox" id="menu-btn-check">
+                <label for="menu-btn-check" class="menu-btn"><span></span></label>
+                <!--ここからメニュー-->
+                <div class="menu-content">
+                    <div class="hamburger-menu-header">
+                        <div class="hamburger_menu_title">
+                            <%= link_to "Cloud Squid", root_path, class: "menu-title" %>
+                        </div>
+                        <div class="hamburger-menu-log">
+                            <div>
+                                <%= link_to "ログイン", new_user_session_path, class: "menu-log h_btn" %>
+                            </div>
+                            <div>
+                                <%= link_to "新規登録", new_user_registration_path, class: "menu-log h_btn" %>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hamburger_menu_main">
+                        <div>    
+                            <%= link_to "TOP", root_path, class: "menu-main h_btn" %>
+                        </div>
+                        <div>
+                            <%= link_to "ABOUT", plays_path, class: "menu-main h_btn" %>
+                        </div>
+                        <div>
+                        <%= link_to 'YOUTUBE', posts_path, class: "menu-main h_btn" %>
+                        </div>
+                        <div>
+                        <%= link_to 'OPENREC.tv', openrecs_path, class: "menu-main h_btn" %>
+                        </div>
+                        <div>
+                        <%= link_to "PLAYER", users_path, class: "menu-main h_btn" %>
+                        </div>
+                    </div>
+                    <div class="hamburger_menu_sns">
+                        <span>CONTACT SNS</span>
+                        <div>
+                        <a href="#" class="h_btn"><i class="fab fa-twitter"></i>Twitter</a>
+                        </div>
+                    </div>
+                </div>
+                <!--ここまでメニュー--> 
+            </div>    
+            <!---->
+        </div>
+        <!---->
+    </div>
+    <% end %>
+    
+    <%= yield %>
+    
+    <% if flash[:notice] %>
+      <div class="notification_pc is-info flash">
+        <p class="notice"><%= notice %></p>
+      </div>
+    <% end %>
+    
+    <% if flash[:alert] %>
+      <div class="notification_pc is-danger flash">
+        <p class="alert"><%= alert %></p>
+      </div>
+    <% end %>
+</div>
+<!--pc-->
+
+<!--ph-->
+
+<div class="all_ph">
+    <!---->
+    <div class="header-fixed">
+        <div class="header-fixed-in">
+            <input type="checkbox" id="header-hamburger"><!-- チェックボックス非表示 -->
+            <label for="header-hamburger" class="header-hamburger-icon"><span></span></label><!-- チェックボックスラベルのハンバーガーメニュー -->
+            <label id="header-close" for="header-hamburger"></label><!-- 背景暗くする用 -->
+            <div id="header-content">
+                <!-- 表示時のコンテンツの中身 -->
+                <div class="h_title">
+                    <span><%= link_to "Cloud Squid.", root_path, class: "h_top_t" %></span>
+                </div>
+                <% if user_signed_in? %>
+                <div class="h_main">
+                    <div class="h_mylog">
+                        <div class="h_main_nav"><i class="fas fa-child"></i><%= link_to "マイページ", user_path(current_user), class: "h_main_btn" %></div>
+                        <div class="h_main_nav"><i class="fas fa-running"></i><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "h_main_btn" %></div>                  
+                    </div>
+                    <div class="h_main_nav h_m_n"><i class="fas fa-home"></i><%= link_to "TOP", root_path, class: "h_main_btn" %></div>
+                    <div class="h_main_nav h_m_n"><i class="far fa-caret-square-right"></i><%= link_to 'YOUTUBE', posts_path, class: "h_main_btn" %></div>
+                    <div class="h_main_nav h_m_n"><i class="far fa-caret-square-right"></i><%= link_to 'OPENREC.tv', openrecs_path, class: "h_main_btn" %></div>
+                    <div class="h_main_nav h_m_n"><i class="fas fa-images"></i><%= link_to "ABOUT", plays_path, class: "h_main_btn" %></div>
+                    <div class="h_main_nav h_m_n"><i class="fas fa-portrait"></i><%= link_to "PLAYER", users_path, class: "h_main_btn" %></div>
+                    <div class="h_menu_new">
+                        <span class="h_main_new_t">NEW POST</span>
+                        <div class="h_m_n">
+                            <%= link_to "ABOUT NEW", new_play_path, class: "h_main_btn" %>    
+                        </div>
+                        <div class="h_m_n">
+                            <%= link_to "YOUTUBE NEW", new_post_path, class: "h_main_btn" %>
+                        </div>
+                        <div class="h_m_n">
+                            <%= link_to "OPENREC NEW", new_openrec_path, class: "h_main_btn" %>
+                        </div>
+                    </div>
+                    <div class="h_menu_sns">
+                        <span class="h_menu_sns_t">CONTACT SNS</span>
+                        <div>
+                        <a href="#" class="h_main_btn"><i class="fab fa-twitter"></i>Twitter</a>
+                        </div>
+                    </div>                    
+                </div>
+                <% else %>
+                <div class="h_main">
+                    <div class="h_mylog">
+                        <div class="h_main_nav"><i class="fas fa-child"></i><%= link_to "ログイン", new_user_session_path, class: "h_main_btn" %></div>
+                        <div class="h_main_nav"><i class="fas fa-user-edit"></i><%= link_to "新規登録", new_user_registration_path, class: "h_main_btn" %></div>                    
+                    </div>
+                    <div class="h_main_nav h_m_n"><i class="fas fa-home"></i><%= link_to "TOP", root_path, class: "h_main_btn" %></div>
+                    <div class="h_main_nav h_m_n"><i class="far fa-caret-square-right"></i><%= link_to 'YOUTUBE', posts_path, class: "h_main_btn" %></div>
+                    <div class="h_main_nav h_m_n"><i class="far fa-caret-square-right"></i><%= link_to 'OPENREC.tv', openrecs_path, class: "h_main_btn" %></div>
+                    <div class="h_main_nav h_m_n"><i class="fas fa-images"></i><%= link_to "ABOUT", plays_path, class: "h_main_btn" %></div>
+                    <div class="h_main_nav h_m_n"><i class="fas fa-portrait"></i><%= link_to "PLAYER", users_path, class: "h_main_btn" %></div>
+                    <div class="h_menu_sns">
+                        <span class="h_menu_sns_t">CONTACT SNS</span>
+                        <div>
+                        <a href="#" class="h_main_btn"><i class="fab fa-twitter"></i>Twitter</a>
+                        </div>
+                    </div>
+                </div>
+                <% end %>
+            </div>
+            <!-- サイトアイコンを中央に表示 -->
+            <div class="header-site-icon">
+                Cloud Squid.
+            </div>
+        </div>
+    </div>
+<%= yield %>
+
+<% if flash[:notice] %>
+  <div class="notification_ph is-info flash">
+    <p class="notice"><%= notice %></p>
+  </div>
+<% end %>
+
+<% if flash[:alert] %>
+  <div class="notification_ph is-danger flash">
+    <p class="alert"><%= alert %></p>
+  </div>
+<% end %>
+
+</div>
+<!--ph-->
+
+
+
+</body>
+</html>

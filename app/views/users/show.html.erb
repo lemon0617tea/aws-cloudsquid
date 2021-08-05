@@ -1,0 +1,225 @@
+<body>
+
+
+<div class="all_ph">    
+    <div class="home_pc home_ph">
+    <%= image_tag 'splat3.png', class: "home_top" %>
+    </div>
+    <div class="notification_ph">
+    <p id="notice"><%= notice %></p>
+    </div>
+    <div class="plays_index_t">
+    <h1>My Page</h1>
+    </div>
+    
+    <!--<div>マイページ</div>-->
+    <!--<h1>Users#show</h1>-->
+    <!--<p>Find me in app/views/users/show.html.erb</p>-->
+    <div class="users_show">
+        <div class="users_show01">
+            <div class="users_show02">
+            <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png", class: "profile_image_ph" %>
+            </div>
+            <!---->
+            <div class="users_show03">
+                <!---->
+                <div class="users_show04">
+                <i class="fas fa-crown"></i><%= @user.username %>
+                </div>
+                <!---->
+                <div class="users_show05">
+                <% if @user.id == current_user.id %>
+                <%= @user.email %>
+                <% end %>
+                </div>
+                <!---->
+            </div>
+            <!---->
+        </div>
+        <!---->
+        <div class="users_show06">
+        <%= link_to "編集へ", edit_user_path(@user), class: "user_text_show" %>
+        </div>
+        <!---->
+        <div class="users_show07">
+        <%= simple_format @user.profile %>
+        </div>
+        <!---->
+    </div>
+    
+    
+    
+    
+    <!--記録-->
+    <div class="users_show_plays">
+    <% @user.plays.each do |play| %>
+        <!---->
+        <div class="users_show_plays01">
+        <%= link_to play_path(play) do %>
+          <%= attachment_image_tag play, :image, fallback: "no-image.png", class: "image_users" %>
+        <% end %>
+        </div>
+        <!---->
+        <div class="users_show_plays02">
+            <!---->
+            <div class="users_show_plays03 container">
+            <%= link_to play_path(play), class: "users_text_show" do %>
+            詳細を見る
+            <% end %>
+            </div>
+            <!---->
+            <% if @user.id == current_user.id %>
+                <!---->
+                <div class="users_show_plays04 container">
+                <%= link_to edit_play_path(play), class: "users_text_show" do %>
+                編集する
+                <% end %>
+                </div>
+                <!---->
+                <div class="users_show_plays05 container">
+                <%= link_to play_path(play), method: :delete, data: {confirm: "削除しますか？"}, class: "users_text_show" do %>
+                削除する
+                <% end %>
+                </div>
+                <!---->
+            <% end %>
+            <!---->
+        </div>
+        <!---->
+        <div class="users_show_plays06">
+        <%= play.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
+        </div>
+        <!---->
+    <% end %>
+    </div>
+<!--記録-->
+
+<!---->
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+  
+</div>
+
+
+<!--pc-->
+<div class="all_pc">
+    <div class="header_main">
+    <h1 class="tittle an2-fadeup">My Page</h1>
+    </div>
+    
+    <!--<div>マイページ</div>-->
+    <!--<h1>Users#show</h1>-->
+    <!--<p>Find me in app/views/users/show.html.erb</p>-->
+    <div class="users_show">
+        <div class="users_show01">
+            <div class="users_show02">
+            <%= attachment_image_tag @user, :profile_image, fallback: "no-image.png", class: "profile_image_ph" %>
+            </div>
+            <!---->
+            <div class="users_show03">
+                <!---->
+                <div class="users_show04">
+                <i class="fas fa-crown"></i><%= @user.username %>
+                </div>
+                <!---->
+                <div class="users_show05">
+                <% if @user.id == current_user.id %>
+                <%= @user.email %>
+                <% end %>
+                </div>
+                <!---->
+            </div>
+            <!---->
+        </div>
+        <!---->
+        <div class="users_show06">
+        <%= link_to "編集へ", edit_user_path(@user), class: "users_text_show" %>
+        </div>
+        <!---->
+        <div class="users_show07">
+        <%= simple_format @user.profile %>
+        </div>
+        <!---->
+    </div>
+    <!--記録-->
+    <div class="users_show_plays">
+    <% @user.plays.each do |play| %>
+        <!---->
+        <div class="users_show_plays01">
+        <%= link_to play_path(play) do %>
+          <%= attachment_image_tag play, :image, fallback: "no-image.png", class: "image_users" %>
+        <% end %>
+        </div>
+        <!---->
+        <div class="users_show_plays02">
+            <!---->
+            <div class="users_show_plays03 container">
+            <%= link_to play_path(play), class: "users_text_show" do %>
+            詳細を見る
+            <% end %>
+            </div>
+            <!---->
+            <% if @user.id == current_user.id %>
+                <!---->
+                <div class="users_show_plays04 container">
+                <%= link_to edit_play_path(play), class: "users_text_show" do %>
+                編集する
+                <% end %>
+                </div>
+                <!---->
+                <div class="users_show_plays05 container">
+                <%= link_to play_path(play), method: :delete, data: {confirm: "削除しますか？"}, class: "users_text_show" do %>
+                削除する
+                <% end %>
+                </div>
+                <!---->
+            <% end %>
+            <!---->
+        </div>
+        <!---->
+        <div class="users_show_plays06">
+        <%= play.updated_at.strftime("%Y-%m-%d %H:%M") %></time>更新
+        </div>
+        <!---->
+    <% end %>
+    </div>
+<!--記録-->
+
+<!--post youtube-->
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+      <a href="#" class="btn-social-long-twitter">
+        <i class="fab fa-twitter"></i> <span>Follow Me</span>
+      </a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+</div>
+
+</body>

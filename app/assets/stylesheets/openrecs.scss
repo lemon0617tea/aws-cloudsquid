@@ -1,0 +1,120 @@
+// Place all the styles related to the Openrecs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.openrec_index_t{
+    width: 95%;
+    margin: 5px auto;
+}
+
+.openrec_index_ph_top{
+    display: flex;
+    padding-top: 5px;
+}
+
+.openrec_index_log{
+    padding-right: 10px;
+}
+
+.openrec_ph_log{
+    height: 20px;
+    width: 20px;
+}
+.openrec_index{
+    width: 100%;
+}
+.openrec_index01{
+    width: 95%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+.openrec_index03{
+    display: flex;
+}
+.openrec_index04{
+    padding: 10px 0px 0px 0px;
+}
+.openrec_index05{
+    padding: 10px 0px 0px 20px;
+}
+.youtube_index07{
+    margin-top: 5px;
+    font-weight: bold;
+}
+.openrec_index07 i{
+    color: #FFF021;
+}
+.post_username{
+    color: black;
+    text-decoration: none;
+    padding: 0px 0px 0px 10px;
+    letter-spacing: 1px;
+}
+.openrec_index08{
+    text-align: center;
+}
+.openrec_index08 .openrec_text {
+    text-decoration: none;
+    padding: 0px 0px 0px 15px;
+    color: black;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+// show----------------------------
+.openrec_show{
+   width: 95%;
+   margin: auto;
+}
+.openrec_show01{
+    width: 100%;
+}
+.openrec_show02{
+    display: flex;
+    border-bottom: dotted 2px dimgray;
+}
+.container{
+    font-family: "Yu Gothic", YuGothic, Verdana, 'Hiragino Kaku Gothic ProN','Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', 'メイリオ', Meiryo, sans-serif;
+    text-align: center;
+    padding-top: 5px;
+}
+.openrec_text_show{
+    display: inline-block;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    background-color: #AA1BFF;
+    font-size: 14px;
+    line-height: 40px;
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+    border: 2px solid #AA1BFF;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin: 0px 10px 0px 0px;
+    border-radius: 25px;
+}
+.openrec_show06{
+    display: flex;
+    padding: 10px 0px 5px 0px;
+}
+.openrec_show08{
+    padding: 20px 0px 0px 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+.openrec_username{
+    color: black;
+    text-decoration: none;
+    padding: 0px 0px 0px 10px;
+    letter-spacing: 1px;
+    
+}
+.openrec_show08 i{
+    color: #FFF021;
+}
+.openrec_show09{
+    letter-spacing: 1px;
+    font-size: 14px;
+}

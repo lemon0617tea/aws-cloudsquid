@@ -1,0 +1,123 @@
+
+<body>
+
+
+<div class="all_ph">
+  <div class="home_pc home_ph">
+    <%= image_tag 'splat3.png', class: "home_top" %>
+  </div>
+  
+  <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class="form-wrapper">
+      <div class="h1">Log in</div>
+      <form>
+        <div class="form-item">
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+        <div class="form-item">
+          <%= f.label :password %><br />
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
+        
+        <% if devise_mapping.rememberable? %>
+        <div class="field">
+          <%= f.check_box :remember_me %>
+          <%= f.label :remember_me %>
+        </div>
+        <% end %>
+        
+        <div class="button-panel">
+          <%= f.submit "Log in", class: "button" %>
+        </div>
+      </form>
+      <div class="form-footer">
+        <p><a>
+          <%= link_to "Create an account", new_user_registration_path, class: "" %>
+        </a></p>
+        <!--<p><a>-->
+        <!--  < link_to "Forgot your password?", new_password_path(resource_name) ><br />-->
+        <!--</a></p>-->
+      </div>
+    </div>
+  <% end %>
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+        <a href="https://twitter.com/lemon0617tea"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+  
+</div>  
+
+  <!--pc-->
+<div class="all_pc">
+  <div class="header_main">
+    <h1 class="tittle an2-fadeup">Log in</h1>
+  </div>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+  <div class="form-wrapper">
+    <div class="h1">Log in</div>
+    <form>
+      <div class="form-item">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      </div>
+      <div class="form-item">
+        <%= f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "current-password" %>
+      </div>
+      
+      <% if devise_mapping.rememberable? %>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+      <% end %>
+      
+      <div class="button-panel">
+        <%= f.submit "Log in", class: "button" %>
+      </div>
+    </form>
+    <div class="form-footer">
+      <p><a>
+        <%= link_to "Create an account", new_user_registration_path, class: "" %>
+      </a></p>
+      <!--<p><a>-->
+      <!--  < link_to "Forgot your password?", new_password_path(resource_name) ><br />-->
+      <!--</a></p>-->
+    </div>
+  </div>
+<% end %>
+
+  <footer>
+    <div class="footer01">
+    <p id="page-top"><a href="#">↑</a></p>
+    </div>
+    <div class="footer02">
+      <div class="h3">
+        <p></p>
+      </div>
+      <div class="footer03">
+        <a href="https://twitter.com/lemon0617tea"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="Copyright">
+      <small>Copyright &copy; 2021 CloudSquid Co.,Ltd.</small>
+    </div>
+  </footer>
+  
+</div>
+</body>
