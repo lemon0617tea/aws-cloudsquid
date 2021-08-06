@@ -69,8 +69,9 @@ gem 'devise'
 gem "refile", require: "refile/rails", github: 'manfe/refile'
 gem "refile-mini_magick"
 gem 'jquery-rails'
+# Gemfile
 group :production do
-  gem 'pg', '~> 0.18.4'
+  gem 'pg', '0.20.0'
 end
 group :development do
   gem 'brakeman', :require => false

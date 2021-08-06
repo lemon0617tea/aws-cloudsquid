@@ -1,4 +1,7 @@
 {
+    "extensions": {
+        "@git.ignoreLimitWarning": true
+    },
     "instance": {
         "@automaticShutdown": "never"
     },
