@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="jp">
   <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloudsquid</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -70,9 +73,7 @@
               splatoon3のコンテンツ内容が分かり次第アプリ内の機能追加を
               
               致しますのでお楽しみ下さい。
-              
           </p>
-          
         <div class="new02">
           <span>下記に記されている上位プレイヤーの皆様へ</span>
         </div>
@@ -109,7 +110,11 @@
     PLAYER
     </div>
     <div class="image_player">
-    <%= image_tag 'koko.png', class: "image_player01" %>
+      <div class="slide" id="makeImg">
+        <%= image_tag 'koko.png', class: "img" %>
+        <%= image_tag 'rusu.jpg', class: "img" %>
+        <%= image_tag 'koko2.jpg', class: "img" %>
+      </div>
     </div>
     <div class="player01">
       
